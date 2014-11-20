@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 
+import settings
+
 def count_docs(day=None):
     u'''
     day（日付）に生成された怪文書の数を数える関数
@@ -17,7 +19,8 @@ def main():
     u'''
     メイン関数
     '''
-    pass
+    num = count_docs()
+    mail(settings.mail_address, num)
 
 
 if __name__ == "__main__":
